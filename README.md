@@ -138,6 +138,25 @@ findfirst([H|T]) -> findfirst(T).
 cleaner([H|T]) -> H.
 ```
 
+### Usage
+
+```erlang
+2> c(firstNotRepeatingCharacter).
+{ok,firstNotRepeatingCharacter}
+3> firstNotRepeatingCharacter:firstNotRepeatingCharacter("abacabad").
+99
+4> [99].
+"c"
+5> firstNotRepeatingCharacter:firstNotRepeatingCharacter("abacabaabacaba").
+95
+6> [95].
+"_"
+```
+
+While using from the terminal is that Erlang returns the integer value for the character.
+
+To get the string representation we convert it for printing through [int] mechanism
+
 ## Conclusion
 
 It took me a while and several iterations to get through this one Erlang. I came to realize the extent to which I have become reliant on abstractions like Python Dictionaries (in which this was a trivial use case).
